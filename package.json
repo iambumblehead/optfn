@@ -1,6 +1,7 @@
 {
   "name": "optfn",
-  "version": "0.0.1",
+  "main": "optfn",  
+  "version": "0.0.2",
   "license" : "MIT",
   "readmeFilename": "README.md",
   "description": "Handles optional callbacks in node.js-style functions receiving them.",
