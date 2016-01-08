@@ -1,7 +1,7 @@
 {
   "name": "optfn",
   "main": "optfn",  
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license" : "MIT",
   "readmeFilename": "README.md",
   "description": "Treat any reference as function. No runtime errors for non-functions.",
