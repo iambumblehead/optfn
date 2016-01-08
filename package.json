@@ -1,10 +1,10 @@
 {
   "name": "optfn",
   "main": "optfn",  
-  "version": "0.0.2",
+  "version": "0.0.4",
   "license" : "MIT",
   "readmeFilename": "README.md",
-  "description": "Handles optional callbacks in node.js-style functions receiving them.",
+  "description": "Treat any reference as function. No runtime errors for non-functions.",
 
   "repository": {
     "type": "git",

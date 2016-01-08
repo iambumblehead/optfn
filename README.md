@@ -1,62 +1,20 @@
 optfn
 =====
-**(c)[Bumblehead][0], 2014** [MIT-license](#license)  
+**(c)[Bumblehead][0], 2014,2015,2016** [MIT-license](#license)
 
-### OVERVIEW:
+Treat any reference as function. No runtime errors for non-functions.
 
-Handles optional callbacks in node.js-style functions receiving them.
+```javascript
+validfn = function (o) { console.log(o) };
+bogusfn = undefined;
 
-Handling optional callbacks isn't difficult, but requires boilerplate that reduces maintainability. `optfn` moves the boilerplate to its own file.
+optfn(bogusfn)('go');
+optfn(validfn)('go'); // go!
+```
 
-Handling an optional callback **_without_ optfn**:
-  ```javascript
-  function asyncfn (opt1, fn) {
-      fn = typeof fn === 'function' ? fn : function () {};
-      
-      b(opt1, function (err, res1) {
-          if (err) return fn(err);
-          c(res1, fn);
-      });
-  }
-  ```
+[7]: https://raw.githubusercontent.com/iambumblehead/es5classic/master/es5classic_120x120.png
 
-Handling an optional callback **_with_ optfn**:
-  ```javascript
-  function asyncfn (opt1, fn) {
-      fn = optfn(fn);
-      
-      b(opt1, function (err, res1) {
-          if (err) return fn(err);
-          c(res1, fn);
-      });
-  }
-  ```
-
-
-[0]: http://www.bumblehead.com                            "bumblehead"
-
-------------------------------------------------------------------------------
-#### <a id="install"></a>INSTALL:
-
-optfn may be downloaded directly or installed through `npm`.
-
- * **npm**   
-
- ```bash
- $ npm install optfn
- ```
-
- * **Direct Download**
- 
- ```bash  
- $ git clone https://github.com/iambumblehead/optfn.git
- ```
-
-
-------------------------------------------------------------------------------
-#### <a id="license">License:
-
- ![scrounge](https://github.com/iambumblehead/scroungejs/raw/master/img/hand.png) 
+ ![scrounge](https://github.com/iambumblehead/scroungejs/raw/master/img/hand.png)[![es5 classic][7]][7]
 
 (The MIT License)
 
