@@ -1,26 +1,25 @@
 optfn
 =====
-**(c)[Bumblehead][0], 2014,2015,2016** [MIT-license](#license)
+**(c)[Bumblehead][0]** [MIT-license](#license)
 
-Treat any reference as function. No runtime errors for non-functions.
+No runtime error if a non-function is 'called'.
 
 ```javascript
-validfn = function (o) { console.log(o) };
+validfn = o => console.log(o);
 bogusfn = undefined;
 
 optfn(bogusfn)('go');
 optfn(validfn)('go'); // go!
+optfn(null, validfn)('go'); // go!
 ```
 
-
 [0]: http://www.bumblehead.com                            "bumblehead"
-[7]: https://raw.githubusercontent.com/iambumblehead/es5classic/master/es5classic_120x120.png
 
  ![scrounge](https://github.com/iambumblehead/scroungejs/raw/master/img/hand.png)[![es5 classic][7]][7]
 
 (The MIT License)
 
-Copyright (c) 2014 [Bumblehead][0] <chris@bumblehead.com>
+Copyright (c) [Bumblehead][0] <chris@bumblehead.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

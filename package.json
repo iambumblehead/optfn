@@ -1,11 +1,10 @@
 {
   "name": "optfn",
-  "main": "optfn",  
-  "version": "0.0.6",
-  "license" : "MIT",
+  "main": "optfn",
+  "version": "0.0.7",
+  "license": "MIT",
   "readmeFilename": "README.md",
-  "description": "Treat any reference as function. No runtime errors for non-functions.",
-
+  "description": "No runtime errors if non-function is 'called'.",
   "repository": {
     "type": "git",
     "url": "https://github.com/iambumblehead/optfn.git"
@@ -14,10 +13,11 @@
     "optional",
     "callback"
   ],
-  "devDependencies" : {
-      "jasmine-node" : ">=1.3.0"
+  "devDependencies": {
+    "jasmine": "2.5.3",
+    "jasmine-spec-reporter": "3.2.0"
   },
-  "scripts" : {
-      "test" : "node node_modules/jasmine-node/bin/jasmine-node --verbose test/"
+  "scripts": {
+    "test": "node node_modules/jasmine/bin/jasmine.js --verbose"
   }
 }

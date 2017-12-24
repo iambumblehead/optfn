@@ -1,14 +1,8 @@
 // Filename: optfn.js
-// Timestamp: 2014.03.20-13:48:33 (last modified)  
+// Timestamp: 2017.12.23-17:18:54 (last modified)
 // Author(s): Bumblehead (www.bumblehead.com)
 
-
-var optfn = module.exports = (function (b) {
-
-  return function (fn) {
-    return typeof fn === "function" ? fn : b;
-  };
-
-}(function(){}));
-
-
+module.exports = (slugfn => (
+  (fn, deffn) => typeof fn === 'function'
+    ? fn : typeof deffn === 'function' ? deffn : slugfn
+))(() => {});
