@@ -1,8 +1,9 @@
 {
   "name": "optfn",
   "main": "optfn",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "license": "MIT",
+  "type": "module",
   "readmeFilename": "README.md",
   "description": "No runtime errors if non-function is 'called'.",
   "repository": {
@@ -14,10 +15,9 @@
     "callback"
   ],
   "devDependencies": {
-    "jasmine": "2.5.3",
-    "jasmine-spec-reporter": "3.2.0"
+    "ava": "^3.6.0"
   },
   "scripts": {
-    "test": "node node_modules/jasmine/bin/jasmine.js --verbose"
+    "test": "ava"
   }
 }
