@@ -1,9 +1,10 @@
 {
   "name": "optfn",
-  "main": "optfn.js",
-  "version": "0.1.1",
+  "main": "dist/optfn.js",
+  "browser": "dist/optfn.js",
+  "module": "optfn.js",
+  "version": "0.1.2",
   "license": "MIT",
-  "type": "module",
   "readmeFilename": "README.md",
   "description": "No runtime errors if non-function is 'called'.",
   "repository": {
@@ -15,9 +16,14 @@
     "callback"
   ],
   "devDependencies": {
-    "ava": "^3.6.0"
+    "ava": "^3.6.0",
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.1",
+    "@babel/preset-env": "^7.10.1"
   },
   "scripts": {
-    "test": "ava"
+    "test": "ava",
+    "start": "./node_modules/.bin/babel optfn.js --out-dir dist/ --presets=@babel/env",
+    "prepare": "npm start && npm test"
   }
 }
