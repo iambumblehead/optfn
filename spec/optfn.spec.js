@@ -2,8 +2,8 @@
 // Timestamp: 2017.12.23-17:21:52 (last modified)
 // Author(s): Bumblehead (www.bumblehead.com)  
 
-import optfn from '../optfn.js';
-import test from 'ava';
+const test = require('ava');
+const optfn = require('..').default;
 
 function asyncfn (fn, deffn) {
   optfn(fn, deffn)('done');
