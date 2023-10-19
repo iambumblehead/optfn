@@ -1,6 +1,5 @@
 optfn
 =====
-**(c)[Bumblehead][0]** [MIT-license](#license)
 
 No runtime error if a non-function is 'called'.
 
@@ -15,7 +14,7 @@ optfn(null, validfn)('go'); // go!
 
 [0]: http://www.bumblehead.com                            "bumblehead"
 
- ![scrounge](https://github.com/iambumblehead/scroungejs/raw/master/img/hand.png)[![es5 classic][7]][7]
+ ![scrounge](https://github.com/iambumblehead/scroungejs/raw/main/img/hand.png)
 
 (The MIT License)
 
